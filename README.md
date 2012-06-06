@@ -24,4 +24,9 @@ This plugin renders the callout boxes/buttons/tabs in the slider/carousel and re
 
 Refer to the documentation on these plugins to customize the behavior of any of the aspects/features demanded from the design
 
+The widget also uses Google Web Fonts, although, using FontSquirrel on future implementations is recommended.
+
 ### Google Web Fonts
+
+* [Google Web Fonts] (http://fonts.googleapis.com/css?family=Amaranth:regular,regularitalic)
+
