@@ -1,10 +1,14 @@
-= Overview
+jQuery Tabbed Slider Gallery
+============================
+
+Overview
+--------
 
 A jQuery-based website widget that provides a slider-like navigation, the indices/tabs of which load different content for each tab in a designated content area. The initial implementation of this widget was done on the homepage of the Tufts Schildmeyer Funeral Homes website, here: <a target="_blank" href="http://www.tuftsschildmeyer.com/">http://www.tuftsschildmeyer.com/</a>.
 
 The standalone widget can be viewed <a target="_blank" href="http://www.tuftsschildmeyer.com/tabbed-slider-gallery/jquery-tsg.php">http://www.tuftsschildmeyer.com/tabbed-slider-gallery/jquery-tsg.php</a>
 
-== There are a number of components that go into the Tabbed Slider Gallery Widget, including:
+There are a number of components that go into the Tabbed Slider Gallery Widget, including:
 
 === jQuery plugins
 
