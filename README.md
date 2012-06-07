@@ -28,7 +28,7 @@ Refer to the documentation on these plugins to customize the behavior of any of 
 
 ### Google Web Fonts
 
-The widget also uses Google Web Fonts, although, using FontSquirrel on future implementations is recommended (better FOUC prevention).
+The widget also uses Google Web Fonts, coded/invovked for better FOUC/FOUT prevention.
 
 * [Google Web Fonts] (http://fonts.googleapis.com/css?family=Amaranth:regular,regularitalic)
 
