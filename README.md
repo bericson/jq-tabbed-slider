@@ -4,11 +4,11 @@ jQuery Tabbed Slider Gallery
 Overview
 --------
 
-A multi-plugin jQuery-dependent website widget that provides a slider-like navigation, the indices/tabs of which, when selected, load different content for each tab in a designated content area. The initial implementation of this widget was done on the <a target="_blank" href="http://www.tuftsschildmeyer.com/">homepage of the Tufts Schildmeyer Funeral Homes website</a>
+A multi-plugin-dependent jQuery website widget that provides a slider-like navigation, which, when the navigational items/tabs in the slider are selected, each load different content for the selected item/tab in a designated content area on the page. The initial implementation of this widget was done on the <a target="_blank" href="http://www.tuftsschildmeyer.com/">homepage of the Tufts Schildmeyer Funeral Homes website</a>
 
-<a target="_blank" href="http://www.tuftsschildmeyer.com/tabbed-slider-gallery/jquery-tsg.php">The standalone verison of the widget on said site can be viewed, at this link.</a> (NOTE: some layout styling will be a little off, as the containing page has some styles that aren't being inherited on this standalone page.)
+<a target="_blank" href="http://www.tuftsschildmeyer.com/tabbed-slider-gallery/jquery-tsg.php">A standalone verison of the widget on said site can be viewed, at this link.</a> (NOTE: some layout styling will be a little off, as the containing page has some styles that aren't being inherited on this standalone page.)
 
-##### [ "jQuery Tabbed Slider Gallery" widget developed while in the employ of FuneralNet; all programmatic library components were/are sourced, combined, enhanced, and shared by me, GitHub user, 'bericson', and are used under GPL and/or Creative Commons Licensing. Any graphical files referenced are done-so only for demonstration/portfolio purposes, with no reuse of said assets from Tufts Schildmeyer allowed. Much thanks. ~ BE/FN, 2012.06.05 ]
+##### [ The "jQuery Tabbed Slider Gallery" widget was developed while in the employ of FuneralNet; all programmatic library components were/are sourced, combined, enhanced, and shared by me, GitHub user, 'bericson', and are used under GPL and/or Creative Commons Licensing. Any graphical files referenced are done-so only for demonstration/portfolio purposes, with no reuse of said assets pertaining to Tufts Schildmeyer allowed. Much thanks. ~ BE/FN, 2012.06.05 ] #####
 
 Components
 ----------
