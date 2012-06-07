@@ -32,5 +32,7 @@ The widget also uses Google Web Fonts, although, using FontSquirrel on future im
 
 * [Google Web Fonts] (http://fonts.googleapis.com/css?family=Amaranth:regular,regularitalic)
 
+----------
+
 Please note that the "jQuery Tabbed Slider Gallery" widget was developed while in the employ of FuneralNet; all programmatic library components were/are sourced, combined, enhanced, and shared by me, GitHub user, 'bericson', and are used under GPL and/or Creative Commons Licensing. Any graphical files referenced are done-so only for demonstration/portfolio purposes, with no reuse of said assets pertaining to Tufts Schildmeyer allowed. Much thanks. ~ BE/FN, 2012.06.05</span>
 
