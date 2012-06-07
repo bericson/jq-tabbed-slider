@@ -11,9 +11,9 @@ A jQuery-based website widget that provides a slider-like navigation, the indice
 Components
 ----------
 
-There are a few components that go into the Tabbed Slider Gallery widget, including:
-
 ### jQuery plugins
+
+There are a few components that go into the Tabbed Slider Gallery widget, including:
 
 * [jQuery UI 1.8.16 Tabs] (http://jqueryui.com/demos/tabs/#cookie) - This plugin controls the switching of the content in the main section when the user clicks on the respective callout boxes/buttons/tabs in the slider/carousel
 
@@ -24,9 +24,9 @@ This plugin renders the callout boxes/buttons/tabs in the slider/carousel and re
 
 Refer to the documentation on these plugins to customize the behavior of any of the aspects/features demanded from the design
 
-The widget also uses Google Web Fonts, although, using FontSquirrel on future implementations is recommended.
-
 ### Google Web Fonts
+
+The widget also uses Google Web Fonts, although, using FontSquirrel on future implementations is recommended (better FOUC prevention).
 
 * [Google Web Fonts] (http://fonts.googleapis.com/css?family=Amaranth:regular,regularitalic)
 
