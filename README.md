@@ -8,9 +8,9 @@ A multi-plugin-dependent jQuery widget that provides a slider-like navigation, w
 
 The initial implementation of this widget was done on the <a target="_blank" href="http://www.tuftsschildmeyer.com/">homepage of the Tufts Schildmeyer Funeral Homes website</a>
 
-<a target="_blank" href="http://www.tuftsschildmeyer.com/tabbed-slider-gallery/jquery-tsg.php">A standalone verison of the widget on said site can be viewed, at this link.</a> (NOTE: some layout styling will be a little off, as the containing page has some styles that aren't being inherited on this standalone page.)
+<a target="_blank" href="http://www.tuftsschildmeyer.com/tabbed-slider-gallery/jquery-tsg.php">A standalone verison of the widget on said site can be viewed, at this link.</a> (Note: some layout and/or styling will be a little off, as the containing page has some styles that aren't being inherited on this standalone page.)
 
-<small>[ The "jQuery Tabbed Slider Gallery" widget was developed while in the employ of FuneralNet; all programmatic library components were/are sourced, combined, enhanced, and shared by me, GitHub user, 'bericson', and are used under GPL and/or Creative Commons Licensing. Any graphical files referenced are done-so only for demonstration/portfolio purposes, with no reuse of said assets pertaining to Tufts Schildmeyer allowed. Much thanks. ~ BE/FN, 2012.06.05 ]</small>
+###### Also note that: The "jQuery Tabbed Slider Gallery" widget was developed while in the employ of FuneralNet; all programmatic library components were/are sourced, combined, enhanced, and shared by me, GitHub user, 'bericson', and are used under GPL and/or Creative Commons Licensing. Any graphical files referenced are done-so only for demonstration/portfolio purposes, with no reuse of said assets pertaining to Tufts Schildmeyer allowed. Much thanks. ~ BE/FN, 2012.06.05 ]######
 
 Components
 ----------
