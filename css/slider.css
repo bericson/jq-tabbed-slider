@@ -5,14 +5,14 @@
 #action-button { float: right; margin: 5px 55px 0px 0px; }
 #action-button-locs { float: right; margin: 15px 20px 0px 0px; }
 #clear-both { clear: both; }
-#controls { width: 941px; height: 138px; margin: 0 auto; background: url('http://www.tuftsschildmeyer.com/tabbed-slider-gallery/img/bg-control-panel.png') no-repeat; }
-#tabs-00 { width: 941px; height: 340px; background: url('http://www.tuftsschildmeyer.com/tabbed-slider-gallery/img/slide-00.jpg') no-repeat; }
-#tabs-01 { width: 941px; height: 340px; background: url('http://www.tuftsschildmeyer.com/tabbed-slider-gallery/img/slide-01.jpg') no-repeat; }
-#tabs-02 { width: 941px; height: 340px; background: url('http://www.tuftsschildmeyer.com/tabbed-slider-gallery/img/slide-02.jpg') no-repeat; }
-#tabs-03 { width: 941px; height: 340px; background: url('http://www.tuftsschildmeyer.com/tabbed-slider-gallery/img/slide-03.jpg') no-repeat; }
-#tabs-04 { width: 941px; height: 340px; background: url('http://www.tuftsschildmeyer.com/tabbed-slider-gallery/img/slide-04.jpg') no-repeat; }
-#tabs-05 { width: 941px; height: 340px; background: url('http://www.tuftsschildmeyer.com/tabbed-slider-gallery/img/slide-05.jpg') no-repeat; }
-#tabs-06 { width: 941px; height: 340px; background: url('http://www.tuftsschildmeyer.com/tabbed-slider-gallery/img/slide-06.jpg') no-repeat; }
+#controls { width: 941px; height: 138px; margin: 0 auto; background: url('../img/bg-control-panel.png') no-repeat; }
+#tabs-00 { width: 941px; height: 340px; background: url('../img/slide-00.jpg') no-repeat; }
+#tabs-01 { width: 941px; height: 340px; background: url('../img/slide-01.jpg') no-repeat; }
+#tabs-02 { width: 941px; height: 340px; background: url('../img/slide-02.jpg') no-repeat; }
+#tabs-03 { width: 941px; height: 340px; background: url('../img/slide-03.jpg') no-repeat; }
+#tabs-04 { width: 941px; height: 340px; background: url('../img/slide-04.jpg') no-repeat; }
+#tabs-05 { width: 941px; height: 340px; background: url('../img/slide-05.jpg') no-repeat; }
+#tabs-06 { width: 941px; height: 340px; background: url('../img/slide-06.jpg') no-repeat; }
 .bx-captions { display: none; }
 #slider { width: 145px; height: 138px; overflow: hidden; visibility: hidden; margin: 0px; padding: 0px; }
 #slider li { width: 145px; height: 92px; margin: 0px; padding: 0px 10px 0px 10px; }

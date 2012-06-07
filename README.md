@@ -6,7 +6,7 @@ Overview
 
 A multi-plugin-dependent jQuery widget that provides a slider-like navigation, which, when the navigational items/tabs in the slider are selected, each load different content for the selected item/tab in a designated content area on the page.
 
-The initial implementation of this widget was done on the <a target="_blank" href="http://www.tuftsschildmeyer.com/">homepage of the Tufts Schildmeyer Funeral Homes website</a>. The widget, however, works standalone if this repository is downloaded and run on a local machine, as well.
+The initial implementation of this widget was done on the <a target="_blank" href="http://www.tuftsschildmeyer.com/">homepage of the Tufts Schildmeyer Funeral Homes website</a>. The widget, however, works standalone if this repository is downloaded and run on a local machine, as well (see usage note below).
 
 Components
 ----------
