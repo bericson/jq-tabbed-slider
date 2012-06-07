@@ -6,9 +6,7 @@ Overview
 
 A multi-plugin-dependent jQuery widget that provides a slider-like navigation, which, when the navigational items/tabs in the slider are selected, each load different content for the selected item/tab in a designated content area on the page.
 
-The initial implementation of this widget was done on the <a target="_blank" href="http://www.tuftsschildmeyer.com/">homepage of the Tufts Schildmeyer Funeral Homes website</a>
-
-<a target="_blank" href="http://www.tuftsschildmeyer.com/tabbed-slider-gallery/jquery-tsg.php">A standalone verison of the widget on said site can be viewed, at this link.</a> (Note: some layout and/or styling will be a little off, as the containing page has some styles that aren't being inherited on this standalone page.)
+The initial implementation of this widget was done on the <a target="_blank" href="http://www.tuftsschildmeyer.com/">homepage of the Tufts Schildmeyer Funeral Homes website</a>. The widget, however, works standalone if this repository is downloaded and run on a local machine, as well.
 
 Components
 ----------
