@@ -1,0 +1,247 @@
+---++  Building a jQuery Slider
+
+For rendering animated content on a website, sometimes Flash is the most appropriate tool for the job, and sometimes it makes more sense to use jQuery for the job (more details on these considerations at links at bottom.) One such case where jQuery makes more sense to use is for rendering images presented in a simple carousel, or 'slider,' that cycles through a specified set of them. These instructions detail how to go about setting this up to work.
+
+The site referenced in this example is: <a target="_blank" href="http://143.227.54.10/~fairfaxmfh/_mgxroot/page_10744.php">http://143.227.54.10/~fairfaxmfh/_mgxroot/page_10744.php</a> (NOTE: this is a temporary location - once the site goes live, the slider will be viewable on any page but the homepage at http://www.fairfaxmemorialfuneralhome.com/ on MFS2)
+
+<ol style="list-style-type: upper-alpha;">
+	<li>Copy default jQuery Slider directory
+		<ul>
+			<li>There is a jQuery Slider library/widget that should be used as a starting point for building a customized Slider; on the development server, go to the following location ... :
+
+<verbatim>
+W:\common.funeralnet.com\default_jquery-slider\
+</verbatim>
+
+			... and copy the 'bxslider' directory and all the files/folders within it, then paste the 'bxslider' folder into the root directory for the site-at-hand</li>
+			<li>Upload the 'bxslider' directory and all of its contents to the live production server</li>
+			<li>On a sidenote, the local copy of the 'bxslider' referenced above has been worked upon to develop it beyond the boilerplate library/widget so as to 'templatize' it for our purposes; also, so we always have access to it, a copy of the original widget/library files has been made, here ... :
+
+<verbatim>
+W:\common.funeralnet.com\default_jquery-slider\source-archive_do-not-copy-for-production\dev-versions-archive\bxslider-original
+</verbatim>
+
+				... and the original library/widget may be downloaded from its source, here, as well:
+				<ul>
+					<li><a target="_blank" href="http://bxslider.com/">http://bxslider.com/</a></li>	
+				</ul>
+			</li>
+		</ul>
+	</li>
+
+	<li>Customize settings
+		<ul>
+			<li>Determine the functionality that's being called for in the design, such as: randomizing, prev/next/play/pause buttons, linkable images, circular looping of slides, captions, transitions, pagination, etc.</li>
+			<li>To view all of the available settings, open this file ... :
+<verbatim>
+/source/jquery.bxSlider.js
+</verbatim>
+			... and in it you will find the <a target="_blank" href="http://en.wikipedia.org/wiki/Minify">un-minified</a> version of the bxSlider !JavaScript code; the minified version of the file that gets used for production is in the '/js' directory, but, the un-minified version has commented-out notes on the available settings and what they do; the bxSlider site has some examples pages, as well, indexed, here: <a target=_"blank" href="http://bxslider.com/examples">http://bxslider.com/examples</a>
+			</li>
+			<li>Once you've identified the settings that are to be used, copy all of the pertinent variable names and put them in the function call that instantiates the bxSlider in the 'bxslider.php' file, so, for instance, for a slider that has image-based previous/next/pause/play buttons, add the variables that make those work to the function call, like this ... :
+			
+<verbatim>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#slider1').bxSlider({
+		autoControls: true,
+		prevImage: 'http://143.227.54.10/~fairfaxmfh/bxslider/img/button-previous.png',
+		nextImage: 'http://143.227.54.10/~fairfaxmfh/bxslider/img/button-next.png',
+		startImage: 'http://143.227.54.10/~fairfaxmfh/bxslider/img/button-play.png',
+		stopImage: 'http://143.227.54.10/~fairfaxmfh/bxslider/img/button-pause.png',
+		pause: 8000
+	});
+	document.getElementById('slider1').style.visibility='visible';
+});
+</script>
+</verbatim>
+			... and, also, say the client decides later that they want the first image to load in a random fashion on each new page load, then, add in the additional variable and value, 'randomStart: true', like this:
+<verbatim>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#slider1').bxSlider({
+		autoControls: true,
+		prevImage: 'http://143.227.54.10/~fairfaxmfh/bxslider/img/button-previous.png',
+		nextImage: 'http://143.227.54.10/~fairfaxmfh/bxslider/img/button-next.png',
+		startImage: 'http://143.227.54.10/~fairfaxmfh/bxslider/img/button-play.png',
+		stopImage: 'http://143.227.54.10/~fairfaxmfh/bxslider/img/button-pause.png',
+		pause: 8000,
+		randomStart: true
+	});
+	document.getElementById('slider1').style.visibility='visible';
+});
+</script>
+</verbatim>
+			</li>
+		</ul>
+	</li>
+	
+	<li>Customize files to match the specified design
+		<ul>
+			<li>Open the 'bxslider.php' file and proceed to manipulate the styling to incorporate the graphical elements in the design that has been provided, including the previous/next buttons, caption text, etc.</li>
+			<li>The buttons will almost always be defined in the mockup, but, if there aren't any buttons defined in the design, there is a default set to choose from, here ... :
+<verbatim>
+W:\common.funeralnet.com\default_jquery-sliderr\source\24-arrows-buttons-Shapes4FREE
+</verbatim>
+			... or, alternatively, there is a handy button graphic generator tool, here: <a target="_blank" href="http://www.glassybuttons.com/">http://www.glassybuttons.com/</a>; also, the 'loading.gif' graphic/icon file can changed, as well, if desired - just go to <a target="_blank" href="http://www.ajaxload.info/">http://www.ajaxload.info/</a> to generate a custom loading graphic/icon</li>
+			<li>Upload the 'bxslider.php' to the '/bxslider' directory on the live server and view with a browser and continue to refine the widget/library/graphics/etc. until everything works nicely</li>
+			<li>Now, make the changes to the 'bxslider.php' file so that it can be called as a PHP include (the file initially has all of the basic HTML document markup within it so that it can be cross-browser tested before it is integrated (PHP included) into the broader website template, and it will look broken in some browsers without that markup):
+				<ul>
+					<li>Now, in the 'bxslider.php' file make the following edits:
+						<ul>
+							<li>Delete the header HTML markup from the top section of the document:
+<verbatim>
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>bxSlider jQuery Slider </title>
+</verbatim>
+							</li>
+							<li>Delete the following HTML markup in a middle section of the document:
+<verbatim>
+</head>
+
+<body>
+</verbatim>
+							</li>
+							<li>Delete the following HTML markup in the bottom section of the document:
+<verbatim>
+</body>
+</html>
+</verbatim>
+							</li>
+							<li>Select all of the remaining code and use your file editor program's unindent button (in Homesite, it is in the vertical toolbar separting the file tree windows from the coding window) to remove the tabbed spacing so that the code starts its nesting structure flush to the left of the document</li>
+						</ul>
+					</li>
+					<li>Save the file and upload it to the server to be called by a PHP include wherever it is to be displayed on the site</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	
+	<li>Add Carousel Viewer widget to the site/page
+		<ul>
+			<li>Add the PHP include statement on the site/page where the viewer is to be rendered	
+<verbatim>
+<?php include('/home/clientid/domains/domainname.com/public_html/bxslider/bxslider.php'); ?>
+</verbatim>
+			</li>
+			<li>If a siteZen site, complete the following steps:
+				<ul>
+					<li>Discover the file name/number that siteZen has assigned the file it created in the previous step when the site was published (which, basically IS the PHP Widget that gets included)
+						<ul style="list-style-type: upper-roman;">
+							<li>Connect to the client's server via FTP and drill-down to the '/_mgxroot' directory</li>
+							<li>Download all of the files that start with the words 'page_widget_', then have some random string of numbers and '.php'</li>
+							<li>Open all of the files in a file editor and scroll through each file, looking for the one that has the include statement for the 'flash-header.php' file we created in the first step</li>
+							<li>Once the correct file is found, copy the filename and save it somewhere for use in the next set of steps</li>
+						</ul>
+					</li>
+				 
+					<li>Create the code to call the bxSlider in a way that won't make siteZen choke
+						<ul>
+							<li>Copy template code to be placed in the file that gets included by the PHP Widget Box (the 'bxslider-header.php' file created in the first step):
+								<ul style="list-style-type: lower-alpha;">
+<verbatim>
+<?php
+$url = (!empty($_SERVER['HTTPS'])) ? "https://".$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'] : "http://".$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+// echo $url;
+if ($url=='http://www.clientdomainname.com/_mgxroot/page_widget_XXXXXXXXXXXXXXXX.php') {
+?>
+<h4>jQuery Widget Placeholder</h4>
+
+<?php
+} else {
+?>
+
+<style type="text/css">
+#slideshow { width: 979px; height: 257px; margin: 0px; padding: 0px; }
+#slider1 { width: 979px; height: 257px; overflow: hidden; visibility: hidden; margin: 0px; padding: 0px; }
+#slider1 li { width: 979px; height: 257px; margin: 0px; padding: 0px; }
+#slideshow .bx-next { position: absolute; top: 219px; left: 935px; border: 0px; }
+#slideshow .bx-auto { position: absolute; top: 219px; left: 900px; border: 0px; }
+#slideshow .bx-prev { position: absolute; top: 219px; left: 865px; border: 0px; }
+#slideshow .btn-play { display: none; }
+#slideshow .bx-captions { font-family: Verdana, arial, non-serif; font-size: 14px; line-height: 16px; color: #fff; position: relative; top: -33px; left: 20px; }
+#slideshow img { border: 0px; }
+</style>
+
+<script src="http://143.227.54.10/~fairfaxmfh/bxslider/js/jquery.1.6.3.js" type="text/javascript"></script>
+<script src="http://143.227.54.10/~fairfaxmfh/bxslider/js/jquery.bxSlider.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#slider1').bxSlider({
+		autoControls: true,
+		prevImage: 'http://143.227.54.10/~fairfaxmfh/bxslider/img/button-previous.png',
+		nextImage: 'http://143.227.54.10/~fairfaxmfh/bxslider/img/button-next.png',
+		startImage: 'http://143.227.54.10/~fairfaxmfh/bxslider/img/button-play.png',
+		stopImage: 'http://143.227.54.10/~fairfaxmfh/bxslider/img/button-pause.png',
+		pause: 8000
+	});
+	document.getElementById('slider1').style.visibility='visible';
+});
+</script>
+	
+<div id="slideshow">
+	<!-- Preload play button graphic to avoid the pause/flash when clicked -->
+	<img class="btn-play" src="http://143.227.54.10/~fairfaxmfh/bxslider/img/button-play.png" />
+	<ul id="slider1">
+		<li><img src="http://143.227.54.10/~fairfaxmfh/bxslider/img/slide-00.jpg" style="width: 979px; height: 257px;" border="0" title="Our staff is here to assist you in creating a unique life tribute that honors your loved one's life" /></li>
+		<li><img src="http://143.227.54.10/~fairfaxmfh/bxslider/img/slide-01.jpg" style="width: 979px; height: 257px;" border="0" title="Serving Virginia families since our opening in 2003" /></li>
+		<li><img src="http://143.227.54.10/~fairfaxmfh/bxslider/img/slide-02.jpg" style="width: 979px; height: 257px;" border="0" title="We help preserve and celebrate your lifetime of family memories" /></li>
+		<li><img src="http://143.227.54.10/~fairfaxmfh/bxslider/img/slide-03.jpg" style="width: 979px; height: 257px;" border="0" title="We will help you honor and tell the story of your loved one's special life." /></li>
+		<li><img src="http://143.227.54.10/~fairfaxmfh/bxslider/img/slide-04.jpg" style="width: 979px; height: 257px;" border="0" title="Our beautiful, spacious chapel can accommodate any type of service you want." /></li>
+		<li><img src="http://143.227.54.10/~fairfaxmfh/bxslider/img/slide-05.jpg" style="width: 979px; height: 257px;" border="0" title="Set yourself and your family at ease by planning your funeral arrangements ahead of time" /></li>
+		<li><img src="http://143.227.54.10/~fairfaxmfh/bxslider/img/slide-06.jpg" style="width: 979px; height: 257px;" border="0" title="We offer grief counseling and support groups to help you cope with the loss of your loved one" /></li>
+	</ul>		
+</div>
+
+<?php
+}
+?>
+</verbatim>
+									</li>
+								</ul>
+							</li>
+							<li>On the line of code in the above block, on the line that reads ... :<verbatim>if ($url=='http://www.clientdomainname.com/_mgxroot/page_widget_XXXXXXXXXXXXXXXX.php') {</verbatim>... replace the 'page_widget_XXXXXXXXXXXXXXXX.php' filename with the one determined in one of the previous steps</li>
+							<li>Save and upload this file back up to the '_mgxroot' directory for the site (overwriting the existing blank file)</li>
+							<li>Now, when viewing pages within the Site Builder, the Flash object will not be called, and, instead the 'Flash File Placeholder' text will show - when the page is loaded in a regular browser outside of the Site Builder, the Flash object will be loaded for presentation</li>
+						</ul>
+					</li>
+				</ul>			
+			</li>			
+			<li>Check your work with the multiple, 'usual suspect,' browsers and continue to iron out any bugs, layout or otherwise, that may show up once the integration has been done</li>
+		</ul>
+	</li>
+		
+	<li>Additional resources
+		<ul>
+			<li>Here are some links to articles with details on the whens-and-whys of using Flash versus jQuery:
+				<ul>
+					<li><a target="_blank" href="http://blog.navigationarts.com/rich-animation-flash-vs-jquery/">http://blog.navigationarts.com/rich-animation-flash-vs-jquery/</a></li>
+					<li><a target="_blank" href="http://33rockers.com/2011/01/26/jquery-versus-flash/">http://33rockers.com/2011/01/26/jquery-versus-flash/</a></li>				
+				</ul>
+			</li>						
+		</ul>
+	</li>
+</ol>
+
+-- Main.BenEricson - 16 Oct 2011 - Modified/amended (added additional info on hiding the slider markup when working in the sZ Site Builer)
+
+-- Main.BenEricson - 14 Oct 2011 - Modified/amended (added info on hiding the slider markup when working in the sZ Site Builer)
+
+-- Main.BenEricson - 12 Oct 2011 - Modified/amended
+
+-- Main.BenEricson - 10 Oct 2011 - Modified/amended
+
+-- Main.BenEricson - 03 Oct 2011 - Modified/amended
+
+-- Main.BenEricson - 18 Aug 2011 - Modified/amended
+
+-- Main.BenEricson - 26 Jul 2011 - Amended
+
+-- Main.BenEricson - 19 Jul 2011 - Amended
+
+-- Main.BenEricson - 5 May 2011 - Created
